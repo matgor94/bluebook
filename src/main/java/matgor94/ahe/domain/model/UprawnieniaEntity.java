@@ -1,12 +1,20 @@
-package model;
+package matgor94.ahe.domain.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
-
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "uprawnienia", schema = "bluebook", catalog = "")
 public class UprawnieniaEntity {
     private int idUprawnienia;
-    private Object uprawnienie;
+    private Enum uprawnienie;
     private String opis;
 
     @Id
@@ -19,15 +27,15 @@ public class UprawnieniaEntity {
         this.idUprawnienia = idUprawnienia;
     }
 
-    @Basic
-    @Column(name = "uprawnienie")
-    public Object getUprawnienie() {
-        return uprawnienie;
-    }
-
-    public void setUprawnienie(Object uprawnienie) {
-        this.uprawnienie = uprawnienie;
-    }
+//    @Basic
+//    @Column(name = "uprawnienie")
+//    public Object getUprawnienie() {
+//        return uprawnienie;
+//    }
+//
+//    public void setUprawnienie(Object uprawnienie) {
+//        this.uprawnienie = uprawnienie;
+//    }
 
     @Basic
     @Column(name = "opis")

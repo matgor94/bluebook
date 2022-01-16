@@ -1,8 +1,16 @@
-package model;
+package matgor94.ahe.domain.model;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "obserwacja", schema = "bluebook", catalog = "")
 public class ObserwacjaEntity {
